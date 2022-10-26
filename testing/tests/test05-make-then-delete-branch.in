@@ -1,0 +1,9 @@
+I definitions.inc
+> init
+<<<
+> branch test
+<<<
+E .gitlet/refs/test
+> rm-branch test
+<<<
+* .gitlet/refs/test

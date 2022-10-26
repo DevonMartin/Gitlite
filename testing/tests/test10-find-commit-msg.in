@@ -1,0 +1,10 @@
+I definitions.inc
+> init
+<<<
+I add_and_commit_a_and_b.inc
+> find "a is a wug"
+${COMMIT_ID}
+<<<*
+> find "b is not a wug"
+${COMMIT_ID}
+<<<*

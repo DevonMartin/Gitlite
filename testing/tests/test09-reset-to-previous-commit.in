@@ -1,0 +1,33 @@
+# Add and commit a and b, reset to the initial commit,
+# ensure a and b are gone, and ensure the log reflects only
+# the initial commit.
+I definitions.inc
+> init
+<<<
+I add_and_commit_a_and_b.inc
+> log
+===
+${COMMIT_HEAD}
+b is not a wug
+
+===
+${COMMIT_HEAD}
+a is a wug
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+# UID of initial commit
+D UID3 "${3}"
+> reset ${UID3}
+<<<
+* a.txt
+* b.txt
+> log
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*

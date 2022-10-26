@@ -1,0 +1,18 @@
+I definitions.inc
+> init
+<<<
++ a wug.txt
+> add a
+<<<
+> commit "a is a wug"
+<<<
+> branch b
+<<<
++ b notwug.txt
+> add b
+<<<
+> commit "b is not a wug"
+<<<
+> merge b
+Given branch is an ancestor of the current branch.
+<<<

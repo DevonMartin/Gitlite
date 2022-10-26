@@ -1,0 +1,16 @@
+# Create an empty branch, add and commit a and b,
+# switch to the empty branch, assert it is empty,
+# switch to the master branch, assert it is not
+# empty, empty it, and then assert it is empty.
+> init
+<<<
+> branch "empty branch"
+<<<
+I add_and_commit_a_and_b.inc
+> checkout "empty branch"
+<<<
+I a_and_b_do_not_exist.inc
+> checkout master
+<<<
+I a_and_b_do_exist.inc
+I rm_and_commit_a_and_b.inc

@@ -1,0 +1,15 @@
+# Add a file, commit it, add a different file as the same name,
+# checkout the HEAD version of the file, and ensure it changed
+# back.
+> init
+<<<
++ a.txt wug.txt
+> add a.txt
+<<<
+> commit "a is a wug"
+<<<
++ a.txt notwug.txt
+# Must change
+> checkout -- a.txt
+<<<
+= a.txt wug.txt

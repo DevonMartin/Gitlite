@@ -1,0 +1,42 @@
+# Add and commit a file, add and commit a different file with
+# the same name, checkout the first version and ensure it is
+# correct, checkout the second version and ensure it is correct.
+I definitions.inc
+> init
+<<<
++ a.txt wug.txt
+> add a.txt
+<<<
+> commit "version 1 of a.txt"
+<<<
++ a.txt notwug.txt
+> add a.txt
+<<<
+> commit "version 2 of a.txt"
+<<<
+= a.txt notwug.txt
+# Each ${COMMIT_HEAD} captures its commit UID.
+> log
+===
+${COMMIT_HEAD}
+version 2 of a.txt
+
+===
+${COMMIT_HEAD}
+version 1 of a.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+# UID of second version
+D UID2 "${1}"
+# UID of current version
+D UID1 "${2}"
+> checkout ${UID1} -- a.txt
+<<<
+= a.txt wug.txt
+> checkout ${UID2} -- a.txt
+<<<
+= a.txt notwug.txt

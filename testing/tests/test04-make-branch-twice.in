@@ -1,0 +1,9 @@
+I definitions.inc
+> init
+<<<
+> branch test
+<<<
+> branch test
+A branch with that name already exists.
+<<<
+E .gitlet/refs/test
