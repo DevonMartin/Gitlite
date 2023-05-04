@@ -8,15 +8,13 @@ Uncomment this picture when logo is finished and uploaded!
 
 -->
 
-Gitlet is a lightweight recreation of Git, i.e. a version control system for your local work station. It was built with Java, created per the [spec](https://sp21.datastructur.es/materials/proj/proj2/proj2) of Project 2 of Spring '21 CS61B at University of California, Berkeley.
-
-Although this was a school assignment, the only starting material was a couple of recommended empty classes, a few basic tests and a utility class to slightly simplify working with files. The entirety of the logic and design of the codebase is made by me.
+Gitlet is a lightweight recreation of Git, i.e. a version control system for your local work station. It was built with Java, with the entirety of the logic and design of the codebase made by me.
 
 ## Commands
 
 ### init
 
-#####Usage:
+##### Usage:
 
 	java gitlet.Main init
 
@@ -24,7 +22,7 @@ Initializes a new Gitlet repository in your local directory. A newly created fol
 
 ### add
 
-#####Usage
+##### Usage
 
 	java gitlet.Main add [file name or "." for all files in the CWD]
 
@@ -32,7 +30,7 @@ Adds a file as it exists in the current working directory to a staging area. The
 
 ### rm
 
-#####Usage
+##### Usage
 
 	java gitlet.Main rm [file name]
 	
@@ -40,7 +38,7 @@ If the given file is currently staged for addition, it is removed from staging. 
 
 ### status
 
-#####Usage
+##### Usage
 
 	java gitlet.Main status
 
@@ -57,7 +55,7 @@ Displays information about the current state of the local repository.
 
 ### commit
 
-#####Usage
+##### Usage
 
 	java gitlet.Main commit [commit message]
 	
@@ -65,7 +63,7 @@ Saves a copy of files modified and staged for either addition or removal in a ne
 
 ### log
 
-#####Usage
+##### Usage
 
 	java gitlet.Main log
 	
@@ -80,7 +78,7 @@ Displays a record of commitments and merges that have taken place on the current
 
 ### find
 
-#####Usage
+##### Usage
 
 	java gitlet.Main find [commit message]
 	
@@ -95,7 +93,7 @@ Searches through all commitments made in the current repository and returns, in 
 
 ### branch
 
-#####Usage
+##### Usage
 
 	java gitlet.Main branch [new branch name]
 	
@@ -103,7 +101,7 @@ Creates a new branch with the given name, if a branch with that name does not cu
 
 ### rm-branch
 
-#####Usage
+##### Usage
 
 	java gitlet.Main rm-branch [branch name]
 	
@@ -111,19 +109,19 @@ Removes a branch from the current repository if it is not the current branch. Th
 
 ### checkout
 
-#####Usage 1
+##### Usage 1
 
 	java gitlet.Main checkout [branch name]
 	
 Switches the user to a branch with the name provided if it exists and if the user does not have any untracked files in the way. All files in the CWD are replaced with the files tracked by the latest commitment of the branch checked out.
 
-#####Usage 2
+##### Usage 2
 
 	java gitlet.Main checkout -- [file name]
 	
 Checks out the version of a file from the latest commitment in the current branch if it exists. Replaces the file in the CWD if one with the same name exists.
 
-#####Usage 3
+##### Usage 3
 
 	java gitlet.Main checkout [commit id] -- [file name]
 	
@@ -131,7 +129,7 @@ Checks out the version of a file from the commitment with the provided ID if the
 
 ### global-log
 
-#####Usage
+##### Usage
 
 	java gitlet.Main global-log
 	
@@ -139,7 +137,7 @@ Displays a log of all commitments and merges ever made in the current repository
 
 ### reset
 
-#####Usage
+##### Usage
 
 	java gitlet.Main reset [commit ID]
 	
@@ -147,7 +145,7 @@ Essentially checks out a given commit ID by replacing all files in the CWD with 
 
 ### merge
 
-#####Usage
+##### Usage
 
 	java gitlet.Main merge [branch name]
 	
